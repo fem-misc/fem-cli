@@ -5,7 +5,7 @@ const program = require('commander')
 const exists = require('fs').existsSync
 const path = require('path')
 const ora = require('ora')
-const home = require('user-home')
+const os = require('os')
 const tildify = require('tildify')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
@@ -65,7 +65,7 @@ const name = inPlace ? path.relative('../', process.cwd()) : rawName
 const to = path.resolve(rawName || '.')
 const clone = program.clone || false
 
-const tmp = path.join(home, '.vue-templates', template.replace(/[\/:]/g, '-'))
+const tmp = path.join(os.homedir(), '.vue-templates', template.replace(/[\/:]/g, '-'))
 if (program.offline) {
   console.log(`> Use cached template at ${chalk.yellow(tildify(tmp))}`)
   template = tmp

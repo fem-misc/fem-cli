@@ -1,5 +1,5 @@
 {
-  "name": "vue-cli",
+  "name": "fem-cli",
   "version": "2.9.6",
   "description": "A simple CLI for scaffolding Vue.js projects.",
   "preferGlobal": true,
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/vue-cli.git"
+    "url": "git+https://github.com/FEMessage/fem-cli.git"
   },
   "keywords": [
     "vue",
@@ -20,13 +20,15 @@
   "author": "Evan You",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vuejs/vue-cli/issues"
+    "url": "https://github.com/FEMessage/fem-cli/issues"
   },
-  "homepage": "https://github.com/vuejs/vue-cli#readme",
+  "homepage": "https://github.com/FEMessage/fem-cli#readme",
   "scripts": {
     "test": "npm run lint && npm run e2e",
     "lint": "eslint test/e2e/test*.js lib bin/* --env mocha",
-    "e2e": "rimraf test/e2e/mock-template-build && mocha test/e2e/test.js --slow 1000"
+    "e2e": "rimraf test/e2e/mock-template-build && mocha test/e2e/test.js --slow 1000",
+    "stdver": "standard-version -m '[skip ci] chore(release): v%s'",
+    "release": "gren release --override"
   },
   "dependencies": {
     "async": "^2.4.0",
@@ -34,9 +36,10 @@
     "commander": "^2.9.0",
     "consolidate": "^0.14.0",
     "download-git-repo": "^1.0.1",
+    "github-release-notes": "^0.17.0",
     "handlebars": "^4.0.5",
     "inquirer": "^6.0.0",
-    "metalsmith": "^2.1.0",
+    "metalsmith": "^2.3.0",
     "minimatch": "^3.0.0",
     "multimatch": "^2.1.0",
     "ora": "^1.3.0",
@@ -44,11 +47,9 @@
     "request": "^2.67.0",
     "rimraf": "^2.5.0",
     "semver": "^5.1.0",
+    "standard-version": "^6.0.1",
     "tildify": "^1.2.0",
-    "uid": "0.0.2",
-    "user-home": "^2.0.0",
-    "validate-npm-package-name": "^3.0.0",
-    "coffee-script": "1.12.7"
+    "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",

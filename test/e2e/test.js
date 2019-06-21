@@ -36,11 +36,11 @@ function monkeyPatchInquirer (answers) {
   }
 }
 
-describe('vue-cli', () => {
+describe('fem-cli', () => {
   const escapedAnswers = {
-    name: 'vue-cli-test',
+    name: 'fem-cli-test',
     author: 'John "The Tester" Doe <john@doe.com>',
-    description: 'vue-cli e2e test',
+    description: 'fem-cli e2e test',
     preprocessor: {
       less: true,
       sass: true
@@ -51,9 +51,9 @@ describe('vue-cli', () => {
   }
 
   const answers = {
-    name: 'vue-cli-test',
+    name: 'fem-cli-test',
     author: 'John Doe <john@doe.com>',
-    description: 'vue-cli e2e test',
+    description: 'fem-cli e2e test',
     preprocessor: {
       less: true,
       sass: true
